@@ -2,7 +2,6 @@ body {
   background-color: hsl(233, 47%, 7%);
   color: hsl(0, 0%, 100%);
   font-size: 15px;
-  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,23 +12,37 @@ body {
 main {
   background-color: hsl(244, 38%, 16%);
   width: 350px;
-  border-radius: 20px;
+  border-radius: 15px;
   text-align: center;
+  margin: 50px;
 }
 
-div.img {
-  background-color: hsl(277, 64%, 61%); /*Pour essayer de rendre l'image violette (tests avec z-index -null)*/
+img {
   width: 350px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/*
+div.img {
+  z-index: 2;
+  position: relative;
+  background-color: hsl(277, 64%, 61%, 0.356);
   height: 257px;
+  width: 350px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 img {
+  z-index: 1;
+  position: relative;
+  top: -257px;
   width: 350px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+*/
 
 div.content {
   padding: 15px;
@@ -63,11 +76,6 @@ div.flex {
 }
 
 /*Footer*/
-footer {
-  position: absolute;
-  bottom: 5px;
-}
-
 .attribution { 
   font-size: 11px; 
   text-align: center; 
@@ -75,4 +83,41 @@ footer {
 
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+/*Media Queries*/
+@media screen and (min-width: 1200px) {
+  body {
+    height: 95vh;
+    font-size: 18px;
+  }
+  main {
+    width: 1200px;
+    height: 450px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: start;
+  }
+
+  img {
+    height: 450px;
+    width: 600px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0;
+  }
+
+  div.content {
+    padding: 70px;
+  }
+  
+  div.flex {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    justify-content: space-between;
+  }
 }
