@@ -1,0 +1,78 @@
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  background-color: hsl(244, 38%, 16%);
+  width: 350px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+div.img {
+  background-color: hsl(277, 64%, 61%); /*Pour essayer de rendre l'image violette (tests avec z-index -null)*/
+  width: 350px;
+  height: 257px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+img {
+  width: 350px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+div.content {
+  padding: 15px;
+}
+
+span.violet {
+  color: hsl(277, 64%, 61%);
+}
+
+h1, div {
+  font-weight: 700;
+}
+
+p, span.stats {
+  color: hsla(0, 0%, 100%, 0.50);
+  font-weight: 400;
+}
+
+span.stats {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+div.flex {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
+
+/*Footer*/
+footer {
+  position: absolute;
+  bottom: 5px;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
